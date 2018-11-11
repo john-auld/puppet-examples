@@ -1,0 +1,17 @@
+# .bashrc
+# This file is managed by Puppet!
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+			. /etc/bashrc
+fi
+
+# Global Sift additions
+
+# Sometimes we want to override the default umask for security reasons. This is set below.
+umask <%= @umask %>
+
+# Include any other snippets
+for i in ~/.bashrc.d/* ; do
+  source "$i"
+done

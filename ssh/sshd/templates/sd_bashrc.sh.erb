@@ -1,0 +1,18 @@
+# /etc/profile.d/sd_bashrc.sh
+# This file is managed by Puppet!
+
+#
+# Set the umask for SD accounts UID >= 1000 and member of siftdigital group ( 1006 )
+#
+
+if [ $UID -gt 999 ] && [ `id -g` -eq 1006 ]; then
+    umask 0002
+fi
+
+if [ -d ${HOME}/.bashrc.d ]
+then
+  # Include any other snippets
+  for i in ~/.bashrc.d/* ; do
+    source "$i"
+  done
+fi

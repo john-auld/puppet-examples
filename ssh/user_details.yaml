@@ -1,0 +1,11 @@
+---
+
+# SSH configuration
+sshd_users :
+ "auser" :
+  ensure : 'present'
+  uid : '1500'
+  gid : '1006'
+  groups : [ ]
+  sshkeytype : 'rsa'
+  sshkey : 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDelIYJ6in65/oUtPmCsx4MSQ3mU8/RMdLBEKc/A+USukrZ4F58UNx883Ra3CQ6vVsamnJMEMwIYwgSkndDxUQVSnSPlkr63GpbyoOxx6hGBVlMsL6P9FuhB7x1RmLHitodP01ViNeqhR6eXDK/073+EsHnjJKEdOM3PauYhptWOmrtuC5RGTW2EO7C8dc4KjhsG607iUxY6Yefuy1zX10NsUeckvPIsb6ECdtt4Wqm8e1KJis4j3W9elCs6zowcR4JD8cGzhUxDmIuzYsTKQk1PUtE7BcX3J7pOgNWdxvqZsNGpIj9vR+nDvOnYORneKi2pgdl+If3Y1rIXHeUyWah'
