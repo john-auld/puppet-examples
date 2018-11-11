@@ -1,0 +1,9 @@
+Puppet uses four metaparameters to establish relationships, 
+   and you can set each of them as an attribute in any resource.
+   The value of any relationship metaparameter should be a resource reference 
+   (or array of references) pointing to one or more target resources.
+
+before — Applies a resource before the target resource.
+require — Applies a resource after the target resource.
+notify — Applies a resource before the target resource. The target resource refreshes if the notifying resource changes.
+subscribe — Applies a resource after the target resource. The subscribing resource refreshes if the target resource changes.
