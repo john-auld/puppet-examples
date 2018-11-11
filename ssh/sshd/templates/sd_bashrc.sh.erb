@@ -2,7 +2,7 @@
 # This file is managed by Puppet!
 
 #
-# Set the umask for SD accounts UID >= 1000 and member of siftdigital group ( 1006 )
+# Set the umask for accounts UID >= 1000 and member of group ( 1006 )
 #
 
 if [ $UID -gt 999 ] && [ `id -g` -eq 1006 ]; then
