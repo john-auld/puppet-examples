@@ -7,3 +7,10 @@ before — Applies a resource before the target resource.
 require — Applies a resource after the target resource.
 notify — Applies a resource before the target resource. The target resource refreshes if the notifying resource changes.
 subscribe — Applies a resource after the target resource. The subscribing resource refreshes if the target resource changes.
+
+Chaining Arrows
+  
+  -> (ordering arrow; a hyphen and a greater-than sign) — Applies the resource on the left before the resource on the right.
+  
+  ~> (notifying arrow; a tilde and a greater-than sign) — Applies the resource on the left first.
+     If the left-hand resource changes, the right-hand resource will refresh.
